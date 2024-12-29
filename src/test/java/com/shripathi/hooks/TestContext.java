@@ -2,8 +2,8 @@ package com.shripathi.hooks;
 
 import com.shripathi.driver.DriverManager;
 import com.shripathi.driver.TargetFactory;
-import com.shripathi.projects.website.cms.pages.Dashboard.DashboardPageElpais;
-import com.shripathi.projects.website.cms.pages.Opinion.OpinionPageElpais;
+import com.shripathi.projects.website.elpais.pages.Dashboard.DashboardPageElpais;
+import com.shripathi.projects.website.elpais.pages.Opinion.OpinionPageElpais;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ThreadGuard;
 

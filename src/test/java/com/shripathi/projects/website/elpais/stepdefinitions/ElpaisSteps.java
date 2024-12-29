@@ -1,9 +1,9 @@
-package com.shripathi.projects.website.cms.stepdefinitions;
+package com.shripathi.projects.website.elpais.stepdefinitions;
 
 import com.shripathi.hooks.TestContext;
 import com.shripathi.keywords.WebUI;
-import com.shripathi.projects.website.cms.pages.Dashboard.DashboardPageElpais;
-import com.shripathi.projects.website.cms.pages.Opinion.OpinionPageElpais;
+import com.shripathi.projects.website.elpais.pages.Dashboard.DashboardPageElpais;
+import com.shripathi.projects.website.elpais.pages.Opinion.OpinionPageElpais;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;

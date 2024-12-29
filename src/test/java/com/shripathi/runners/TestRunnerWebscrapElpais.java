@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 @CucumberOptions(
         features = "src/test/resources/features/WebscrapElpais.feature",
         glue = {
-                "com.shripathi.projects.website.cms.stepdefinitions",
+                "com.shripathi.projects.website.elpais.stepdefinitions",
                 "com.shripathi.hooks"
         },
         plugin = {

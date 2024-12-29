@@ -1,9 +1,9 @@
-package com.shripathi.projects.website.cms.pages.Dashboard;
+package com.shripathi.projects.website.elpais.pages.Dashboard;
 
 import com.shripathi.constants.FrameworkConstants;
 import com.shripathi.driver.DriverManager;
 import com.shripathi.keywords.WebUI;
-import com.shripathi.projects.website.cms.pages.Opinion.OpinionPageElpais;
+import com.shripathi.projects.website.elpais.pages.Opinion.OpinionPageElpais;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;

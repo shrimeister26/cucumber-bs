@@ -1,6 +1,6 @@
 /*
  * Copyright (c) 2022.
- * Automation Framework Selenium - Anh Tester
+ * Automation Framework Selenium - Shripathi
  */
 
 package com.shripathi.driver;

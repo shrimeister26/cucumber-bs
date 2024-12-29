@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2022 Anh Tester
+ * Copyright (c) 2024 Shripathi
  * Automation Framework Selenium
  */
 
@@ -211,7 +211,7 @@ public class ObjectUtils {
      * @param value multi value to be replaced in place of wildcard
      *              VD: ObjectUtils.getXpathDynamic("//button[normalize-space()='%s']//div[%d]//span[%d]", "Login", 2, 10);
      * @return dynamic xpath string
-     * @author Anh Tester
+     * @author Shripathi
      */
     public static String getXpathDynamic(String xpath, Object... value) {
         if (xpath == null || xpath.equals("")) {

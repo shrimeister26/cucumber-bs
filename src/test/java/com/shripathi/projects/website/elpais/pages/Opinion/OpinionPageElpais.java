@@ -1,4 +1,4 @@
-package com.shripathi.projects.website.cms.pages.Opinion;
+package com.shripathi.projects.website.elpais.pages.Opinion;
 
 import com.shripathi.driver.DriverManager;
 import com.shripathi.keywords.WebUI;
