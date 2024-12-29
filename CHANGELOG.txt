@@ -124,7 +124,7 @@ v1.4.0
 Sep 7, 2023
 * Update Selenium Java 4.12.1
 * Support CDP 116
-* Change package anhtester.com to com.anhtester
+* Change package shripathi.com to com.shripathi
 * Update version latest for all dependency
 * Require use JDK from 17 or newest
 

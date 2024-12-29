@@ -1,0 +1,38 @@
+userName: shripathibalaji_v0Y6Kc
+accessKey: q4LhPn7CFJDrAsFXhxQz
+framework: "cucumber-testng"
+platforms:
+  - os: Windows
+    osVersion: 10
+    browserName: Chrome
+    browserVersion: latest
+  - os: OS X
+    osVersion: Monterey
+    browserName: Safari
+    browserVersion: 15.6
+  - deviceName: iPhone 13
+    osVersion: 15
+    browserName: Chromium
+    deviceOrientation: portrait
+  - deviceName: OnePlus 11R
+    osVersion: 13.0
+    browserName: chrome
+    deviceOrientation: portrait
+  - os: Windows
+    osVersion: 11
+    browserName: Firefox
+    browserVersion: latest
+parallelsPerPlatform: 1
+browserstackLocal: true
+buildName: bstack-demo
+buildIdentifier: ${BUILD_NUMBER}
+projectName: BrowserStack Sample
+debug: true
+networkLogs: true
+consoleLogs: info
+
+# Test Observability is an intelligent test reporting & debugging product. It collects data using the SDK. Read more about what data is collected at https://www.browserstack.com/docs/test-observability/references/terms-and-conditions
+# Visit observability.browserstack.com to see your test reports and insights. To disable test observability, specify `testObservability: false` in the key below.
+testObservability: true
+
+source: java:intellij:v1.1.6

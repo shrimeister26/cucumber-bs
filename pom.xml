@@ -1,14 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.anhtester</groupId>
-    <artifactId>anhtester-cucumber-testng</artifactId>
+    <groupId>com.shripathi</groupId>
+    <artifactId>shripathi-cucumber-testng</artifactId>
     <version>1.8.3</version>
     <name>TestAutomationFrameworkCucumberTestNG</name>
-    <url>https://github.com/anhtester/AutomationFrameworkCucumberTestNG</url>
+    <url>https://github.com/shripathi/AutomationFrameworkCucumberTestNG</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -29,9 +26,7 @@
         <allure-testng.version>2.29.0</allure-testng.version>
         <allure-maven.version>2.14.0</allure-maven.version>
         <allure-environment-writer.version>1.0.0</allure-environment-writer.version>
-        <allure.cmd.download.url>
-            https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline
-        </allure.cmd.download.url>
+        <allure.cmd.download.url>https://repo.maven.apache.org/maven2/io/qameta/allure/allure-commandline</allure.cmd.download.url>
         <extentreports.version>5.1.2</extentreports.version>
         <apache-poi.version>5.3.0</apache-poi.version>
         <apache-poi-xml.version>5.2.5</apache-poi-xml.version>
@@ -55,7 +50,7 @@
 
         <!-- Suite XML path -->
         <suite.feature>src/test/resources/suites/SuiteFeatureByTag.xml</suite.feature>
-        <suite.feature.login.cms>src/test/resources/suites/SuiteFeatureLoginCMS.xml</suite.feature.login.cms>
+        <suite.feature.elpais.webscrap>src/test/resources/suites/SuiteFeatureWebscrapElpais.xml</suite.feature.elpais.webscrap>
     </properties>
 
     <dependencies>
@@ -319,6 +314,17 @@
             <artifactId>aspectjweaver</artifactId>
             <version>${aspectjweaver.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.google.cloud</groupId>
+            <artifactId>google-cloud-translate</artifactId>
+            <version>2.45.0</version>
+        </dependency>
+        <dependency>
+      <groupId>com.browserstack</groupId>
+      <artifactId>browserstack-java-sdk</artifactId>
+      <version>LATEST</version>
+      <scope>compile</scope>
+    </dependency>
 
     </dependencies>
 
@@ -335,8 +341,8 @@
                         <version>${maven-surefire-plugin.version}</version>
                         <configuration>
                             <suiteXmlFiles>
-                                <suiteXmlFile>${suite.feature.login.cms}</suiteXmlFile>
-                            </suiteXmlFiles>
+                                <suiteXmlFile>${suite.feature.elpais.webscrap}</suiteXmlFile>
+                            </suiteXmlFiles><argLine>-javaagent:"${com.browserstack:browserstack-java-sdk:jar}"</argLine>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -366,14 +372,13 @@
                 <configuration>
                     <suiteXmlFiles>
                         <!-- Call Suite name global set up above -->
-                        <suiteXmlFile>${suite.feature.login.cms}</suiteXmlFile>
+                        <suiteXmlFile>${suite.feature.elpais.webscrap}</suiteXmlFile>
                     </suiteXmlFiles>
 
                     <rerunFailingTestsCount>1</rerunFailingTestsCount>
-                    <argLine>
-                        -Dfile.encoding=UTF-8
-                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjweaver.version}/aspectjweaver-${aspectjweaver.version}.jar"
-                    </argLine>
+                    <argLine>-javaagent:"${com.browserstack:browserstack-java-sdk:jar}"
+-Dfile.encoding=UTF-8
+                        -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectjweaver.version}/aspectjweaver-${aspectjweaver.version}.jar"</argLine>
                     <reportsDirectory>target/test-output</reportsDirectory>
                     <testFailureIgnore>true</testFailureIgnore>
                     <systemPropertyVariables>
@@ -389,9 +394,7 @@
                 <version>${allure-maven.version}</version>
                 <configuration>
                     <reportVersion>${allure-testng.version}</reportVersion>
-                    <allureDownloadUrl>
-                        ${allure.cmd.download.url}/${allure-testng.version}/allure-commandline-${allure-testng.version}.zip
-                    </allureDownloadUrl>
+                    <allureDownloadUrl>${allure.cmd.download.url}/${allure-testng.version}/allure-commandline-${allure-testng.version}.zip</allureDownloadUrl>
                 </configuration>
             </plugin>
 
@@ -429,6 +432,19 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+
+            <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <id>getClasspathFilenames</id>
+            <goals>
+              <goal>properties</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
 
         </plugins>
 

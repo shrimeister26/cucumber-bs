@@ -1,6 +1,6 @@
 ![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
-[![Java CI with Maven](https://github.com/anhtester/AutomationFrameworkCucumberTestNG/actions/workflows/maven.yml/badge.svg)](https://github.com/anhtester/AutomationFrameworkCucumberTestNG/actions/workflows/maven.yml)
+[![Java CI with Maven](https://github.com/shripathi/AutomationFrameworkCucumberTestNG/actions/workflows/maven.yml/badge.svg)](https://github.com/shripathi/AutomationFrameworkCucumberTestNG/actions/workflows/maven.yml)
 
 ## Test Automation Framework Cucumber TestNG and Selenium Java building by Anh Tester
 
@@ -26,7 +26,7 @@
 - Setup **Allure environment**:
   https://mvnrepository.com/artifact/io.qameta.allure/allure-java-commons
   or
-  https://anhtester.com/blog/selenium-java/selenium-java-tai-nguyen-cai-dat-moi-truong)
+  https://shripathi.com/blog/selenium-java/selenium-java-tai-nguyen-cai-dat-moi-truong)
   Download jar and setting Variable Environment as Java JDK
 
   ![image](https://user-images.githubusercontent.com/87883620/161661705-b8706957-5a26-4faf-8ddf-2f9aef78418e.png)
@@ -39,7 +39,7 @@
 
 **1. Run parallel the test case**
 
-- Run Cucumber TestRunner from **src/test/java/anhtester/com/runners**
+- Run Cucumber TestRunner from **src/test/java/shripathi/com/runners**
 - Run Feature file (**src/test/resources/features/**)
 - Run Feature in suite XML (**src/test/resources/suites/**)
 - Run Feature from Maven pom.xml file
@@ -88,7 +88,7 @@ or
 - Config **true/false** in config.properties
   (**_src/test/resources/config/config.properties_**)
 - send_email_to_users=**true** is enable send mail
-- Config mail with email and password in **_src/main/java/anhtester/com/mail/EmailConfig.java_**
+- Config mail with email and password in **_src/main/java/shripathi/com/mail/EmailConfig.java_**
 - Note: if Gmail, you use Password App
 
 ![image](https://user-images.githubusercontent.com/87883620/161658851-2aa41091-ac99-45d9-a79f-aaa828052efb.png)
@@ -98,7 +98,7 @@ or
 **6. Write Log to file**
 
 - Call class: Log.info , Log.pass, Log.error,... (**Log** is a custom global class from Log4j2)
-  (**_import anhtester.com.utils.Log.java_**)
+  (**_import shripathi.com.utils.Log.java_**)
 
 ![image](https://user-images.githubusercontent.com/87883620/161657858-d333ac1d-9e7b-4c1b-baac-151a237a1fa0.png)
 
@@ -115,14 +115,14 @@ or
 
 **8. Read data test from Excel file**
 
-- Create function with annotaion **DataSupplier** on **_src/main/java/anhtester/com/utils/DataProviderUtils.java_**
+- Create function with annotaion **DataSupplier** on **_src/main/java/shripathi/com/utils/DataProviderUtils.java_**
 - Call the name of **DataSupplier** above in the test cases as DataProvider of TestNG
 - Read excel with Map and Hashtable
 
 **9. Base function in the package**
 
-- **_src/main/java/anhtester/com/utils_**
-- **_src/main/java/anhtester/com/helpers_**
+- **_src/main/java/shripathi/com/utils_**
+- **_src/main/java/shripathi/com/helpers_**
 
 **10. Read data test from JSON file**
 
@@ -136,7 +136,7 @@ or
 
 **12. Call test case sample**
 
-- Run test case TestNG: src/test/java/anhtester/com/projects/website/crm/testcases
+- Run test case TestNG: src/test/java/shripathi/com/projects/website/crm/testcases
 - Run test case Gherkin: src/test/resources/suites/RunSuiteFeature.xml
 - Or run with maven in **pom.xml** file:  ***mvn clean test***
 
@@ -159,7 +159,7 @@ or
  ┃ ┣ 📂main
  ┃ ┃ ┣ 📂java
  ┃ ┃ ┃ ┗ 📂com
- ┃ ┃ ┃ ┃ ┗ 📂anhtester
+ ┃ ┃ ┃ ┃ ┗ 📂shripathi
  ┃ ┃ ┃ ┃ ┃ ┣ 📂annotations
  ┃ ┃ ┃ ┃ ┃ ┃ ┗ 📜FrameworkAnnotation.java
  ┃ ┃ ┃ ┃ ┃ ┣ 📂config
@@ -228,7 +228,7 @@ or
  ┃ ┗ 📂test
  ┃ ┃ ┣ 📂java
  ┃ ┃ ┃ ┗ 📂com
- ┃ ┃ ┃ ┃ ┗ 📂anhtester
+ ┃ ┃ ┃ ┃ ┗ 📂shripathi
  ┃ ┃ ┃ ┃ ┃ ┣ 📂common
  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜BaseTest.java
  ┃ ┃ ┃ ┃ ┃ ┃ ┣ 📜CommonPageCRM.java
@@ -298,7 +298,7 @@ or
  ┃ ┃ ┃ ┗ 📜pdf-config.yaml
  ┣ 📂target
  ┃ ┣ 📂classes
- ┃ ┃ ┣ 📂anhtester
+ ┃ ┃ ┣ 📂shripathi
  ┃ ┃ ┃ ┗ 📂com
  ┃ ┃ ┃ ┃ ┣ 📂annotations
  ┃ ┃ ┃ ┃ ┃ ┗ 📜FrameworkAnnotation.class
@@ -375,7 +375,7 @@ or
  ┃ ┣ 📂generated-test-sources
  ┃ ┃ ┗ 📂test-annotations
  ┃ ┗ 📂test-classes
- ┃ ┃ ┣ 📂anhtester
+ ┃ ┃ ┣ 📂shripathi
  ┃ ┃ ┃ ┗ 📂com
  ┃ ┃ ┃ ┃ ┣ 📂common
  ┃ ┃ ┃ ┃ ┃ ┣ 📜BaseTest.class
@@ -451,6 +451,6 @@ or
 
 ## Copyright 2022-2024 Anh Tester
 
-> Anh Tester Blog: https://anhtester.com/
+> Anh Tester Blog: https://shripathi.com/
 
-![Alt text](https://anhtester.com/uploads/logo/anhtester_logo_512.png?raw=true "Anh Tester - Automation Testing")
+![Alt text](https://shripathi.com/uploads/logo/shripathi_logo_512.png?raw=true "Anh Tester - Automation Testing")
