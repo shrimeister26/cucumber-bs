@@ -21,7 +21,7 @@ import org.testng.annotations.Test;
                 "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"
         },
         monochrome = true,
-        tags = "@regression"
+        tags = "@webscrap"
 )
 
 public class TestRunnerWebscrapElpais extends AbstractTestNGCucumberTests {
