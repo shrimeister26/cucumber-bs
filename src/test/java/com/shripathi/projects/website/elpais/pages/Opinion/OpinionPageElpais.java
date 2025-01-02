@@ -65,7 +65,7 @@ public class OpinionPageElpais {
 
 
         // Directory to save images
-        Path imageDirectory = Paths.get(".\\reports");
+        Path imageDirectory = Paths.get("./reports");
 
 
         try {
@@ -125,7 +125,7 @@ public class OpinionPageElpais {
                     GoogleNetHttpTransport.newTrustedTransport()
                     , GsonFactory.getDefaultInstance(), null)
                     // Set your application name
-                    .setApplicationName("Stackoverflow-Example")
+                    .setApplicationName("BrowserStack-Example")
                     .build();
         } catch (GeneralSecurityException e) {
             throw new RuntimeException(e);
@@ -151,7 +151,6 @@ public class OpinionPageElpais {
         }
         for (TranslationsResource translationsResource : response.getTranslations())
         {
-            //System.out.println(translationsResource.getTranslatedText());
             translatedText += translationsResource.getTranslatedText()+"\n";
         }
         identifyRepeatedWordsInTitles(translatedText);
@@ -172,6 +171,5 @@ public class OpinionPageElpais {
         for (String word : wordOccurrences.keySet())
             if (wordOccurrences.get(word) > 1)
                 AllureManager.saveTextLog("Words that occurs more than once: " + word + "\n");
-
     }
 }
